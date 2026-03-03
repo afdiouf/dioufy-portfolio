@@ -190,17 +190,26 @@ h1 {
 .avatar-inner {
   width: 100%; height: 100%;
   border-radius: 50%;
+  overflow: hidden;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: spin 8s linear infinite reverse;
 
+  img.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
   span {
     font-family: 'Syne', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
