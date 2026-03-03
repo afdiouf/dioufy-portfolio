@@ -1,0 +1,11 @@
+[build]
+  command = "ng build --configuration production"
+  publish = "dist/mon-portfolio/browser"
+
+[build.environment]
+  NETLIFY_ANGULAR_SKIP_SSR = "true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
