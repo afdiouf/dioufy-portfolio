@@ -1,0 +1,23 @@
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Expertise</span>
+      <h2 class="section-title">Compétences techniques</h2>
+      <p class="section-subtitle">Un stack full stack moderne, du backend robuste aux pipelines DevOps.</p>
+    </div>
+
+    <div class="skills-grid">
+      @for (cat of categories; track cat.title) {
+        <div class="skill-card">
+          <div class="card-icon">{{ cat.icon }}</div>
+          <h3>{{ cat.title }}</h3>
+          <div class="tags">
+            @for (skill of cat.skills; track skill) {
+              <span class="tag">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

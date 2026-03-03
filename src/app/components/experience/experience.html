@@ -1,0 +1,55 @@
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Parcours</span>
+      <h2 class="section-title">Expériences professionnelles</h2>
+    </div>
+
+    <div class="timeline">
+      @for (exp of experiences; track exp.company; let i = $index) {
+        <div class="timeline-item">
+          <div class="timeline-dot" [class.current]="exp.current"></div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-info">
+                <h3>{{ exp.role }}</h3>
+                <p class="company">{{ exp.company }} — <span>{{ exp.location }}</span></p>
+              </div>
+              <div class="period" [class.current-badge]="exp.current">
+                {{ exp.period }}
+                @if (exp.current) { <span class="live">● En poste</span> }
+              </div>
+            </div>
+
+            @if (exp.projects.length > 1) {
+              <div class="project-tabs">
+                @for (proj of exp.projects; track proj.name; let j = $index) {
+                  <button
+                    class="tab"
+                    [class.active]="activeProject[i] === j"
+                    (click)="setProject(i, j)">
+                    {{ proj.name.split('—')[0].trim() }}
+                  </button>
+                }
+              </div>
+            }
+
+            <div class="project-detail">
+              <p class="proj-desc">{{ exp.projects[activeProject[i]].description }}</p>
+              <ul class="task-list">
+                @for (task of exp.projects[activeProject[i]].tasks; track task) {
+                  <li>{{ task }}</li>
+                }
+              </ul>
+              <div class="tech-stack">
+                @for (tech of exp.projects[activeProject[i]].tech; track tech) {
+                  <span class="tech-badge">{{ tech }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

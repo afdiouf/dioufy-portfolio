@@ -1,0 +1,15 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">AF<span>D</span></a>
+
+    <ul class="nav-links" [class.open]="menuOpen()">
+      @for (link of links; track link.href) {
+        <li><a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a></li>
+      }
+    </ul>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,57 @@
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Travaillons ensemble</h2>
+        <p class="section-subtitle">
+          Disponible pour des missions en freelance ou un poste en CDI. 
+          N'hésitez pas à me contacter pour discuter de vos projets.
+        </p>
+
+        <div class="contact-cards">
+          @for (c of contacts; track c.label) {
+            @if (c.href) {
+              <a [href]="c.href" class="contact-card" [target]="c.href.startsWith('http') ? '_blank' : '_self'">
+                <span class="contact-icon">{{ c.icon }}</span>
+                <div>
+                  <p class="contact-label">{{ c.label }}</p>
+                  <p class="contact-value">{{ c.value }}</p>
+                </div>
+                <span class="arrow">→</span>
+              </a>
+            } @else {
+              <div class="contact-card no-link">
+                <span class="contact-icon">{{ c.icon }}</span>
+                <div>
+                  <p class="contact-label">{{ c.label }}</p>
+                  <p class="contact-value">{{ c.value }}</p>
+                </div>
+              </div>
+            }
+          }
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="availability-card">
+          <div class="avail-header">
+            <div class="avail-dot"></div>
+            <span>Disponible</span>
+          </div>
+          <p>Ouvert aux opportunités en Île-de-France ou en remote.</p>
+          <div class="avail-tags">
+            <span>CDI</span>
+            <span>Freelance</span>
+            <span>Mission</span>
+          </div>
+        </div>
+
+        <a href="mailto:afdiouf@gmail.com" class="btn-contact">
+          M'envoyer un message
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

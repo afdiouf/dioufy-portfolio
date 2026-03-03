@@ -1,0 +1,62 @@
+<section id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Parcours académique</span>
+      <h2 class="section-title">Formation & Certifications</h2>
+    </div>
+
+    <div class="edu-layout">
+      <div class="formations">
+        @for (f of formations; track f.degree) {
+          <div class="edu-card">
+            <div class="edu-period">{{ f.period }}</div>
+            <div class="edu-body">
+              <h3>{{ f.degree }}</h3>
+              <p class="school">{{ f.school }} — <span>{{ f.location }}</span></p>
+              @if (f.details.length > 0) {
+                <div class="edu-tags">
+                  @for (d of f.details; track d) {
+                    <span class="edu-tag">{{ d }}</span>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="certifications">
+        <h3 class="certif-title">Certifications</h3>
+        @for (c of certifs; track c.name) {
+          <div class="certif-card">
+            <div class="certif-icon">{{ c.icon }}</div>
+            <div>
+              <p class="certif-name">{{ c.name }}</p>
+              <p class="certif-org">{{ c.org }} · {{ c.date }}</p>
+            </div>
+          </div>
+        }
+
+        <div class="langues-section">
+          <h3 class="certif-title">Langues</h3>
+          <div class="langue-item">
+            <span>Français</span>
+            <div class="dots">
+              <span class="dot filled"></span><span class="dot filled"></span>
+              <span class="dot filled"></span><span class="dot filled"></span>
+              <span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="langue-item">
+            <span>Anglais</span>
+            <div class="dots">
+              <span class="dot filled"></span><span class="dot filled"></span>
+              <span class="dot filled"></span><span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
