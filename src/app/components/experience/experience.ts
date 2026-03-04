@@ -11,6 +11,7 @@ export interface Project {
 export interface Experience {
   role: string;
   company: string;
+  logo: string;
   location: string;
   period: string;
   current: boolean;
@@ -29,6 +30,7 @@ export class ExperienceComponent {
     {
       role: 'Consultant Java / Angular',
       company: 'BPI France — Filiale Assurance Export',
+      logo: '/assets/logos/logo-bpifrance.png',
       location: 'Paris',
       period: 'Juin 2022 — Déc. 2025',
       current: false,
@@ -90,6 +92,7 @@ export class ExperienceComponent {
     {
       role: 'Stage — Développeur',
       company: 'WinMedia',
+      logo: '/assets/logos/logo-winMedia.png',
       location: 'La Ciotat',
       period: 'Juil. 2020 — Oct. 2020',
       current: false,

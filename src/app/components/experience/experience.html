@@ -13,7 +13,15 @@
             <div class="exp-header">
               <div class="exp-info">
                 <h3>{{ exp.role }}</h3>
-                <p class="company">{{ exp.company }} — <span>{{ exp.location }}</span></p>
+                <p class="company">
+                  <img
+                    [src]="exp.logo"
+                    [alt]="exp.company"
+                    class="company-logo"
+                    onerror="this.style.display='none'"
+                  />
+                  {{ exp.company }} — <span>{{ exp.location }}</span>
+                </p>
               </div>
               <div class="period" [class.current-badge]="exp.current">
                 {{ exp.period }}
