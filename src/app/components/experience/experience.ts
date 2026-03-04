@@ -30,8 +30,8 @@ export class ExperienceComponent {
       role: 'Consultant Java / Angular',
       company: 'BPI France — Filiale Assurance Export',
       location: 'Paris',
-      period: 'Juin 2022 — Présent',
-      current: true,
+      period: 'Juin 2022 — Déc. 2025',
+      current: false,
       projects: [
         {
           name: 'Projet REC — Rééchelonnement, consolidation et recouvrement de la dette',
@@ -99,7 +99,7 @@ export class ExperienceComponent {
           description: 'Développement d\'une interface d\'abonnement et d\'un module back-office de gestion de nouveaux clients.',
           tasks: [
             'Ajout d\'une interface d\'inscription et d\'abonnement aux offres',
-            'Développement d\'un module de procédure de gestion de nouveau client (back-end)',
+            'Développement d\'un module de procédure de gestion de nouveau client (back-office)',
             'Rédaction de documentation technique et formation utilisateurs',
           ],
           tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress', 'MySQL', 'Git']

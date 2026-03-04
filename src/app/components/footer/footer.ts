@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <footer>
       <div class="footer-inner">
         <span class="logo">AF<span>D</span></span>
-        <p>© 2025 Al Hamdou Fassar DIOUF — Développeur Full Stack Java/Angular</p>
+        <p>© 2025 Al Hamdou Fassar DIOUF — Développeur Full Stack Java | Spring Boot | Angular</p>
         <a href='https://www.linkedin.com/in/al-hamdou-fassar-diouf-940167152/' target="_blank">LinkedIn ↗</a>
       </div>
     </footer>
