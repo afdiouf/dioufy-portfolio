@@ -8,8 +8,13 @@
       }
     </ul>
 
-    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle" (click)="toggleTheme()" [title]="darkMode() ? 'Mode clair' : 'Mode sombre'">
+        {{ darkMode() ? '☀️' : '🌙' }}
+      </button>
+      <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
