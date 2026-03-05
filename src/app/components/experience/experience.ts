@@ -46,6 +46,8 @@ export class ExperienceComponent {
             'Correction des anomalies CVEs et optimisation SQL',
             'Monitoring Datadog, gestion des incidents de production',
             'Tests de non régression',
+            'Participation à la revue de code et à l\'amélioration continue des processus de développement',
+            'Copilot et Alfred : IA - version entreprise accès données sécurisé pour l’entreprise'
           ],
           tech: ['Java', 'EJB', 'Spring', 'GWT', 'Maven', 'JUnit', 'PowerMockito', 'Cucumber', 'Oracle', 'Jenkins', 'SonarQube', 'PostgreSQL', 'PowerDesigner', 'GitLab', 'Git', 'Ansible', 'Control-M', 'Datadog', 'Jira']
         },
@@ -60,6 +62,8 @@ export class ExperienceComponent {
             'Maintenance corrective et évolutive',
             'Monitoring Datadog, gestion des incidents de production',
             'Tests de non régression',
+            'Participation à la revue de code et à l\'amélioration continue des processus de développement',
+            'Copilot et Alfred : IA - version entreprise accès données sécurisé pour l’entreprise'
           ],
           tech: ['Java', 'Spring Boot', 'Angular', 'JPA', 'Hibernate', 'JUnit', 'Cucumber', 'PostgreSQL', 'PowerDesigner', 'Jasmine', 'Kafka', 'Kubernetes', 'Maven', 'Vault', 'Jenkins', 'FluxCD', 'SonarQube','GitLab', 'Git', 'Jira']
         },
