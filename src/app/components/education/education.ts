@@ -23,7 +23,7 @@ export class EducationComponent {
       school: 'INEAD',
       location: 'Marseille, France',
       period: '2021 — 2022',
-      details: [],
+      details: ['Manager de Projets Informatiques'],
       type: 'master'
     },
     {
@@ -35,11 +35,11 @@ export class EducationComponent {
       type: 'licence'
     },
     {
-      degree: 'Master 1 Génie Logiciel — Major de promotion',
+      degree: 'Master 1 — Systèmes Informatiques et Logiciels',
       school: 'ESMTIC',
       location: 'Dakar, Sénégal',
       period: '2017 — 2018',
-      details: [],
+      details: ['Génie Logiciel'],
       type: 'master'
     }
   ];
