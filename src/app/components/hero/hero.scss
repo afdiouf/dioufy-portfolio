@@ -141,6 +141,24 @@ h1 {
   &:hover { background: var(--accent-glow); }
 }
 
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-glow);
+  }
+}
+
 .hero-stats {
   display: flex;
   align-items: center;

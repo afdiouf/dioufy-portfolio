@@ -22,8 +22,9 @@ import { FooterComponent } from './components/footer/footer';
     FooterComponent
   ],
   template: `
+    <a href="#hero" class="skip-link">Aller au contenu principal</a>
     <app-navbar />
-    <main>
+    <main id="main-content">
       <app-hero />
       <app-about />
       <app-skills />
@@ -32,6 +33,21 @@ import { FooterComponent } from './components/footer/footer';
       <app-contact />
     </main>
     <app-footer />
-  `
+  `,
+  styles: [`
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 0 0 8px 8px;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+  `]
 })
 export class AppComponent {}
