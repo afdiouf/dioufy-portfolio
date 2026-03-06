@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './skills.html',
   styleUrl: './skills.scss'
 })
@@ -18,7 +17,7 @@ export class SkillsComponent {
     {
       icon: '🖥️',
       title: 'Frontend',
-      skills: ['Angular 16', 'AngularJS', 'TypeScript', 'JavaScript', 'Bootstrap', 'HTML / SCSS']
+      skills: ['Angular 20', 'AngularJS', 'TypeScript', 'JavaScript', 'Bootstrap', 'HTML / SCSS']
     },
     {
       icon: '🗄️',

@@ -2,17 +2,22 @@
   <div class="nav-inner">
     <a href="#hero" class="logo">AF<span>D</span></a>
 
-    <ul class="nav-links" [class.open]="menuOpen()">
+    <ul class="nav-links" [class.open]="menuOpen()" id="nav-menu" role="list">
       @for (link of links; track link.href) {
         <li><a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a></li>
       }
     </ul>
 
     <div class="nav-actions">
-      <button class="theme-toggle" (click)="toggleTheme()" [title]="darkMode() ? 'Mode clair' : 'Mode sombre'">
+      <button class="theme-toggle" (click)="toggleTheme()"
+        [title]="darkMode() ? 'Mode clair' : 'Mode sombre'"
+        [attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'">
         {{ darkMode() ? '☀️' : '🌙' }}
       </button>
-      <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()">
+      <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="nav-menu"
+        aria-label="Ouvrir le menu de navigation">
         <span></span><span></span><span></span>
       </button>
     </div>

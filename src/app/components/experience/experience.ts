@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 export interface Project {
   name: string;
@@ -21,7 +20,7 @@ export interface Experience {
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './experience.html',
   styleUrl: './experience.scss'
 })
