@@ -47,10 +47,32 @@
           </div>
         </div>
 
-        <a href="mailto:afdiouf@gmail.com" class="btn-contact">
-          M'envoyer un message
-          <span>→</span>
-        </a>
+        <form [formGroup]="form" (ngSubmit)="send()" class="contact-form" novalidate>
+          <div class="form-group">
+            <input formControlName="name" type="text" placeholder="Votre nom" class="form-input"
+              [class.invalid]="form.get('name')!.invalid && form.get('name')!.touched" />
+          </div>
+          <div class="form-group">
+            <input formControlName="email" type="email" placeholder="Votre email" class="form-input"
+              [class.invalid]="form.get('email')!.invalid && form.get('email')!.touched" />
+          </div>
+          <div class="form-group">
+            <textarea formControlName="message" placeholder="Votre message" rows="4" class="form-input"
+              [class.invalid]="form.get('message')!.invalid && form.get('message')!.touched"></textarea>
+          </div>
+
+          @if (status === 'success') {
+            <p class="form-feedback success">Message envoyé avec succès !</p>
+          }
+          @if (status === 'error') {
+            <p class="form-feedback error">Une erreur est survenue. Réessayez.</p>
+          }
+
+          <button type="submit" class="btn-contact" [disabled]="status === 'sending'">
+            {{ status === 'sending' ? 'Envoi...' : 'Envoyer le message' }}
+            <span>→</span>
+          </button>
+        </form>
       </div>
     </div>
   </div>
